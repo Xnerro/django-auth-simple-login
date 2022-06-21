@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="../static/custom/style.css" /> -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-group">
+                <h1>Login</h1>
+                <form
+                    action="{% url 'login' %}"
+                    method="post"
+                    class="form-control"
+                >
+                    {% csrf_token %}
+                    <input
+                        type="text"
+                        class="form-input mt-1"
+                        placeholder="Username"
+                        name="username"
+                    />
+                    <input
+                        type="password"
+                        class="form-input mt"
+                        placeholder="Password"
+                        name="password"
+                    />
+                    <button class="btn w-100 mt-1">Login</button>
+                </form>
+                <a href="{% url 'register' %}">Sign Up</a>
+            </div>
+        </div>
+    </body>
+</html>

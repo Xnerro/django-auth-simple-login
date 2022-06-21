@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+:root {
+    --main: #F2E9E4;
+    --secondary: #9A8C98;
+    --submain: #C9ADA7;
+    --dark: #22223B;
+    --semidark: #4A4E69;
+    --padding: 0.35em 0.75em 0.35em 0em;
+    --btn: 0.35em 1em 0.35em 1em;
+}
+
+h1 {
+    font-size: 3rem;
+    z-index: 100;
+    color: var(--dark);
+}
+
+* {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow: hidden;
+}
+
+
+#p_username {
+    top: 150%;
+}
+
+#p_email {
+    top: 150%;
+}
+
+#p_password {
+    top: 150%;
+}
+
+.container {
+    background-color: var(--main);
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-group {
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all ease 1s;
+}
+
+.form-group p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    align-self: flex-start;
+    position: relative;
+    left: -1rem;
+}
+
+.form-group .btn-group {
+    align-self: flex-start;
+
+}
+
+.btn {
+    padding: var(--btn);
+    font-size: large;
+    border-radius: 4px;
+    border: 1px solid var(--dark);
+    background-color: var(--dark);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.field {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: inherit;
+    border-bottom: #C9ADA7 2px solid;
+    padding: var(--padding);
+}
+
+.form-input:focus {
+    border-bottom: var(--secondary) 3px solid;
+}
+
+.form-control {
+    width: 50%;
+    padding: 20px;
+}
+
+.me {
+    margin-right: 24px;
+}
+
+.mt {
+    margin-top: 24px;
+}
+
+#msg {
+    padding: 10px;
+    color: rgba(233, 65, 65, 0.851);
+    font-weight: bold
+}
+
+.login {
+    text-decoration: none;
+    padding: var(--btn);
+    background-color: var(--secondary);
+    color: var(--dark);
+    display: block;
+    width: 80px;
+    text-align: center;
+}
+
+.login:hover {
+    background-color: #8a7d88;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mt-1 {
+    margin-top: 48px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

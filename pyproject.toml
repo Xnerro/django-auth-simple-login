@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "django_auth"
+version = "0.1.0"
+description = ""
+authors = ["bagus <bagusssyamsu@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^0.20.0"
+mysqlclient = "^2.1.0"
+Django = "^4.0.5"
+bcrypt = "^3.2.2"
+PyJWT = "^2.4.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+start = "django_auth.script:start"
+migrate = "django_auth.script:migrate"
+migrations = "django_auth.script:migrations"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

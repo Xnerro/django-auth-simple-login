@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="../static/custom/style.css" /> -->
+        <link rel="stylesheet" href="{% static '/style.css' %}" />
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="container">
+            <a href="{% url 'login' %}" class="login">Login</a>
+            <h1 align="center" class="mt">Register</h1>
+            <div class="form-group" id="p_name">
+                <p>1→Please insert your name</p>
+                <div class="field">
+                    <input
+                        type="text"
+                        id="fname"
+                        placeholder="First Name"
+                        class="form-input me"
+                    />
+                    <input
+                        type="text"
+                        id="lname"
+                        placeholder="Last Name"
+                        class="form-input"
+                    />
+                </div>
+                <div class="btn-group mt">
+                    <button class="btn" onclick="slide1()">Next →</button>
+                </div>
+            </div>
+
+            <div class="form-group" id="p_username">
+                <p>2→Please insert your username</p>
+                <div class="field">
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Username"
+                        class="form-input"
+                    />
+                </div>
+                <div class="btn-group mt">
+                    <button class="btn me" onclick="onBack()">← Back</button>
+                    <button class="btn" onclick="slide2()">Next →</button>
+                </div>
+            </div>
+
+            <div class="form-group" id="p_email">
+                <p>3→Please insert your email</p>
+                <div class="field">
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@example.com"
+                        class="form-input"
+                    />
+                </div>
+                <div class="btn-group mt">
+                    <button class="btn me" onclick="onBack()">← Back</button>
+                    <button class="btn" onclick="slide3()">Next →</button>
+                </div>
+            </div>
+
+            <div class="form-group" id="p_password">
+                <p>4→Please insert your password</p>
+                <span id="msg"></span>
+                <div class="field">
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="*****"
+                        class="form-input me"
+                    />
+                    <input
+                        type="password"
+                        id="re_password"
+                        placeholder="Resubmit your password"
+                        class="form-input"
+                        onchange="checkPw()"
+                    />
+                </div>
+                <div class="btn-group mt">
+                    <button class="btn me" onclick="onBack()">← Back</button>
+                    <label class="btn" id="done">Done ✓</label>
+                </div>
+            </div>
+        </div>
+        <form action="{% url 'home' %}" id="'regist" method="get">
+            {% csrf_token %}
+            <input type="submit" id="sub" />
+        </form>
+
+        {% block javascript %}
+
+        <script src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+        <script src="{% static 'index.js' %}"></script>
+
+        {% endblock javascript %}
+    </body>
+</html>
